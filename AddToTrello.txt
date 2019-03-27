@@ -1,0 +1,6 @@
+Je sais pas comment accédé au trello faudrais Add ça
+
+> fussionner les dossier "images" & "boutique/images" , actualisé les liens dans le site 
+> crée un menu unique ( avec différent onglets en fct de la session & des droits ) 
+>fixé le footer au bas de la page ( même si la page.width < window.width ) 
+> Demander a Frank ou il a mis le "include 'ficheFrais.php';" liée au ./boutique/functions/Acces.php

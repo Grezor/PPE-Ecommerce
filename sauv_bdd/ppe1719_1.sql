@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : 127.0.0.1:3306
--- Généré le :  lun. 08 avr. 2019 à 16:20
+-- Généré le :  lun. 25 mars 2019 à 16:27
 -- Version du serveur :  5.7.21
 -- Version de PHP :  7.2.4
 
@@ -31,22 +31,22 @@ SET time_zone = "+00:00";
 DROP TABLE IF EXISTS `bornes`;
 CREATE TABLE IF NOT EXISTS `bornes` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(255) CHARACTER SET utf8mb4 DEFAULT NULL,
-  `img_url` varchar(255) CHARACTER SET utf8mb4 DEFAULT NULL,
-  `code` varchar(255) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `name` varchar(255) DEFAULT NULL,
+  `img_url` varchar(255) DEFAULT NULL,
+  `code` varchar(255) DEFAULT NULL,
   `description` varchar(255) DEFAULT NULL,
-  `quantite_dispo` varchar(255) CHARACTER SET utf8mb4 DEFAULT NULL,
-  `prix` varchar(255) CHARACTER SET utf8mb4 DEFAULT NULL,
+  `quantite` varchar(255) DEFAULT NULL,
+  `prix` varchar(255) DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4;
 
 --
 -- Déchargement des données de la table `bornes`
 --
 
-INSERT INTO `bornes` (`id`, `name`, `img_url`, `code`, `description`, `quantite_dispo`, `prix`) VALUES
-(1, 'borne_1', 'a1.jpg', '458', 'coucou1', '3', '599'),
-(2, 'borne_2', 'camera.png', '458', 'coucou2', '3', '199');
+INSERT INTO `bornes` (`id`, `name`, `img_url`, `code`, `description`, `quantite`, `prix`) VALUES
+(1, 'borne_1', 'a1.jpg', '458', 'une joli borne des ses grands morts ( mais on l\'aime bien quand même )', '3', '599'),
+(2, 'borne_2', 'camera.png', '458', 'oui ça ressemble a une machine à café , mais on est pauvre , donc on fait avec ', '3', '199');
 
 -- --------------------------------------------------------
 
@@ -73,31 +73,6 @@ INSERT INTO `forfait` (`id`, `Nb_photo_select`, `Nb_photo_left`, `Nb_photo_max`)
 -- --------------------------------------------------------
 
 --
--- Structure de la table `panier`
---
-
-DROP TABLE IF EXISTS `panier`;
-CREATE TABLE IF NOT EXISTS `panier` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `id_user` int(11) NOT NULL,
-  `id_produit` int(11) NOT NULL,
-  `quantite` int(11) NOT NULL,
-  PRIMARY KEY (`id`),
-  KEY `fk_id_user` (`id_user`),
-  KEY `fk_id_produit` (`id_produit`)
-) ENGINE=InnoDB AUTO_INCREMENT=13 DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci COMMENT='Normalement , a la place de "id_user" , il devrais y avoir "session_token" , pour pouvoir avoir un même compte ouvert deux fois en même temps ( genre phone et laptop ) sans que les panier se chevauche ,\r\nce qui entrain la création d''une table " session " ou seront stocké les diffrent token de session de l''utilisateur   \r\nManque de temps malheureusement';
-
---
--- Déchargement des données de la table `panier`
---
-
-INSERT INTO `panier` (`id`, `id_user`, `id_produit`, `quantite`) VALUES
-(9, 3, 2, 4),
-(12, 3, 1, 1);
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `photos`
 --
 
@@ -117,12 +92,12 @@ CREATE TABLE IF NOT EXISTS `photos` (
 --
 
 INSERT INTO `photos` (`id`, `date_prise`, `id_reservation`, `url`, `estAime`) VALUES
-(4, '2019-03-03 00:00:00', 5, 'images/1.jpg', 1),
-(5, '2019-03-03 00:00:05', 5, 'images/1.jpg', 1),
-(6, '2019-03-03 00:00:15', 5, 'images/2.jpg', 1),
-(7, '2019-03-04 00:00:15', 5, 'images/5.jpg', 1),
-(8, '2019-03-03 00:00:00', 5, 'images/img03.png', 1),
-(9, '2019-03-03 00:00:00', 5, 'images/img03.png', 1);
+(4, '2019-03-03 00:00:00', 5, 'images/1.jpg', 0),
+(5, '2019-03-03 00:00:05', 5, 'images/1.jpg', 0),
+(6, '2019-03-03 00:00:15', 5, 'images/2.jpg', 0),
+(7, '2019-03-04 00:00:15', 5, 'images/5.jpg', 0),
+(8, '2019-03-03 00:00:00', 5, 'images/img03.png', 0),
+(9, '2019-03-03 00:00:00', 5, 'images/img03.png', 0);
 
 -- --------------------------------------------------------
 
@@ -180,18 +155,11 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `email`, `password`, `confirmation_token`, `confirmed_at`, `reset_token`, `reset_at`, `roles`, `role_id`) VALUES
-(3, 'coucou', 'test@gmail.com', '721a9b52bfceacc503c056e3b9b93cfa', NULL, NULL, NULL, NULL, 'Admin', 2);
+(3, 'coucou', 'coucou@gmail.com', '721a9b52bfceacc503c056e3b9b93cfa', NULL, NULL, NULL, NULL, 'menber', 1);
 
 --
 -- Contraintes pour les tables déchargées
 --
-
---
--- Contraintes pour la table `panier`
---
-ALTER TABLE `panier`
-  ADD CONSTRAINT `fk_id_produit` FOREIGN KEY (`id_produit`) REFERENCES `bornes` (`id`),
-  ADD CONSTRAINT `fk_id_user` FOREIGN KEY (`id_user`) REFERENCES `users` (`id`);
 
 --
 -- Contraintes pour la table `photos`

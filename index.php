@@ -34,7 +34,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
         <div class="container">
             <nav class="navbar navbar-default">
                 <div class="navbar-header navbar-left">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
@@ -192,6 +192,16 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="clearfix"> </div>
 </div>
+
+
+<style>
+	.book-form input[type=submit] {
+    background: #ffce14;
+    color: #fff;
+    position: absolute;
+}
+
+</style>
 <script type="text/javascript">
     $(document).ready(function(){
 

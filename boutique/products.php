@@ -55,6 +55,12 @@
     text-align: center;
   }
 
+    .book-form input[type=submit] {
+    background: #ffce14;
+    color: #fff;
+    position: absolute;
+}
+
   .title{
     color: #337ab7;
     text-shadow: gold 1px 0 10px;

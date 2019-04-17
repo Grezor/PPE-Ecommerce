@@ -21,7 +21,7 @@ en cours
 - Voir les photos liées a la réservation, aimer ou non, valider les photos et de les supprimer   
 
 ## Trello:
-`<liens trello>` : <https://trello.com/b/fUqy4Kvj>
+<https://trello.com/b/fUqy4Kvj>
 
 ## Contrainte de l'environnement :
  

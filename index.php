@@ -192,6 +192,14 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 			</div>
 			<div class="clearfix"> </div>
 </div>
+
+<style>
+    .book-form input[type=submit] {
+    background: #ffce14;
+    color: #fff;
+    position: absolute;
+}
+</style>
 <script type="text/javascript">
     $(document).ready(function(){
 

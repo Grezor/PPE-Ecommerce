@@ -105,47 +105,39 @@ include("header.php");
             $('#connexionBtn').toggle();
             $('#registerBtn').toggle();
         })
-        /////////////////////////////
-        //NE PA SUPRIMER AU DESSUS //
-        /////////////////////////////
-
-
-
-
 
         $('#registerBtn').on('click' , function(e){
                         e.preventDefault();
 
-                        var infos = new Object();
-                        infos.nom = $('#nom').val();
-                        infos.email = $('#email').val();
-                        infos.password = $('#password').val();
-                        infos.confirmPwd = $('#confirmPwd').val();
+            var infos = new Object();
+            infos.nom = $('#nom').val();
+            infos.email = $('#email').val();
+            infos.password = $('#password').val();
+            infos.confirmPwd = $('#confirmPwd').val();
 
 
-                        var infos = JSON.stringify( infos ); 
-                        console.log(infos);
+            var infos = JSON.stringify( infos ); 
+            console.log(infos);
 
-                        $.post( "register.php", { infos : infos } )
-                          .done(function( data ) {
-                            alert( "Data Loaded: " + data );
-                            console.log(data);
-                          });                        
+            $.post( "register.php", { infos : infos } )
+                .done(function( data ) {
+                alert( "Data Loaded: " + data );
+                console.log(data);
+                });                        
         })
 
         $('#connexionBtn').on('click' , function(e){
-                        e.preventDefault();
+            e.preventDefault();
 
-                        var infos = new Object();
-                        infos.nom = $('#loginName').val();
-                        infos.password = $('#loginPassword').val();
-                        var infos = JSON.stringify( infos ); 
+            var infos = new Object();
+            infos.nom = $('#loginName').val();
+            infos.password = $('#loginPassword').val();
+            var infos = JSON.stringify( infos ); 
 
-                        $.post( "get_logged.php", { infos : infos } )
-                          .done(function( data ) {
-                            data == "connected" ? $(location).attr('href',"../index.php") : alert(data);
-                         })
-                      
+            $.post( "get_logged.php", { infos : infos } )
+                .done(function( data ) {
+                data == "connected" ? $(location).attr('href',"../index.php") : alert(data);
+                })  
         })
   /*
 

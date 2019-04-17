@@ -61,7 +61,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                               }
                             ?>
                             <li class="menu__item"><a href="#contact" class="menu__link scroll">Contact</a></li>
-                            <li class="menu__item"><a href="#" id="petitPote"><i class="ddUser fa fa-fw fa-user"></i>
+                            <li class="menu__item"><a href="#" id="petitPote" class="menu__link">Login</a>
                                 <div class="guiguiMainDD">
                                 <?php
                                       if(isset($_SESSION['username'])){
@@ -73,7 +73,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                       }
                                 ?>
                                 </div>
-                            </a></li>
+                            </li>
                         </ul>
                     </nav>
                 </div>
@@ -142,9 +142,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 				</a>
 			</div>
 	</div>	
-	<!-- //banner --> 
-<!--//Header-->
-<!-- //Modal1 -->
+
 <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
 						<!-- Modal1 -->
 							<div class="modal-dialog">
@@ -152,7 +150,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 								<div class="modal-content">
 									<div class="modal-header">
 										<button type="button" class="close" data-dismiss="modal">&times;</button>
-										<h4>Choptaphoto <span>Inn</span></h4>
+										<h4>Choptaphoto<span></span></h4>
 										<img src="images/1.jpg" alt=" " class="img-responsive">
 										<h5>We know what you love</h5>
 										<p>Providing guests unique and enchanting views from their rooms with its exceptional amenities, makes Star Hotel one of bests in its kind.Try our food menu, awesome services and friendly staff while you are here.</p>

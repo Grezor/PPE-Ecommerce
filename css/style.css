@@ -245,7 +245,11 @@ label.icon-search span {
     text-transform: uppercase;
 }
 .navbar-default .navbar-nav > li > a:hover{
-    color:#ffce14;
+     color:#ffce14;
+ }
+
+.navbar-nav > li > a {
+    color: #ff2821;
 }
 .navbar-default .navbar-nav > li > a:focus {
     color: #fff;
@@ -3262,16 +3266,27 @@ color: #fff !important;
 	}
 }
 /*--responsive--*/
-    .guiguiMainDD{
-        display: none;
-        position: absolute;
-        width: 150%;
-        top: 105%;
-        left: -25%;
-        z-index: 5000;
-        overflow: hidden;
-        text-align: center;
-    }
+/*    .guiguiMainDD{*/
+/*        display: none;*/
+/*        position: absolute;*/
+/*        width: 150%;*/
+/*        top: 105%;*/
+/*        left: -25%;*/
+/*        z-index: 5000;*/
+/*        overflow: hidden;*/
+/*        text-align: center;*/
+/*    }*/
+
+.guiguiMainDD {
+    display: none;
+    position: absolute;
+    /* width: 150%; */
+    top: 105%;
+    /* left: -25%; */
+    z-index: 5000;
+    overflow: hidden;
+    /* text-align: center; */
+}
 
     .guiguiMainDD > button{
        margin :0 auto;

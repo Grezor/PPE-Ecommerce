@@ -475,7 +475,7 @@ li.menu__item:nth-child(6) {
 	-moz-background-size: cover;
 }
 .w3layouts-banner-top1{
-	background: url(../images/2.jpg) no-repeat 0px 0px;
+	background: url(../images/about.jpg) no-repeat 0px 0px;
     background-size: cover;	
 	-webkit-background-size: cover;	
 	-moz-background-size: cover;
@@ -767,8 +767,9 @@ li.menu__item:nth-child(6) {
     text-transform: capitalize;
     background: #0a1735;
     color: #FFFFFF;
-    padding: 0em 2em;
     height: 147px!important;
+    text-align: center;
+    width: 29%;
     border: none;
     font-size: 16px;
     letter-spacing: 2px;
@@ -1066,7 +1067,7 @@ h3.title-w3-agileits {
 /*--//main--*/
 /*-- /about --*/
 .about-wthree {
-    padding: 5em 0 22.6em 0px;
+    padding: 2em 0 2em 0px;
     background: #eceef2;
 }
 .ab-w3l-spa {
@@ -1081,11 +1082,11 @@ h3.title-w3-agileits {
 }
 .w3ls-info-about {
     position: absolute;
-    left: 46%;
+    left: 50%;
     z-index: 99;
     padding: 2em 4.5em;
-    top: 107%;
-    border: 10px solid #000;
+    top: 65%;
+    transform: rotate(-20deg); /* Équivalent à rotateZ(45deg) */
 }
 .w3ls-info-about h4 {
     font-size: 1.5em;
@@ -1475,7 +1476,7 @@ text-align:center;
 /*-- //Gallery Section --*/
 /*-- contact --*/
 section.contact-w3ls {
-	background:url(../images/contact.jpg) no-repeat;
+	background:url(../images/party.jpeg) no-repeat;
 	background-position:center;
 	background-attachment:fixed;
 	background-size:100% 100%;
@@ -3261,3 +3262,31 @@ color: #fff !important;
 	}
 }
 /*--responsive--*/
+    .guiguiMainDD{
+        display: none;
+        position: absolute;
+        width: 150%;
+        top: 105%;
+        left: -25%;
+        z-index: 5000;
+        overflow: hidden;
+        text-align: center;
+    }
+
+    .guiguiMainDD > button{
+       margin :0 auto;
+       max-width: 100%;
+       text-overflow: ellipsis;
+      /* Required for text-overflow to do anything */
+       white-space: nowrap;
+       overflow: hidden;
+
+       background-color: rgb(15, 36, 83);
+       border-color: rgb(255, 206, 20);
+    }
+
+    .guiguiMainDD > button > a{
+
+        text-decoration: none;
+        color: #ffffff;
+    }

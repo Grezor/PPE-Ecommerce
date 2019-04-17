@@ -17,7 +17,7 @@
 		$username = addslashes($data->nom); // VOIR index.php 
 		$passwd = md5($data->password); // stockage du MDP em md5
 		
-		$reqUsr = 'SELECT * FROM users WHERE username = "coucou"'; // PREPARATION DE LA REQ
+		$reqUsr = 'SELECT * FROM users WHERE username = "'.$username.'"'; // PREPARATION DE LA REQ
 		if($resultatReq = $bdd->query($reqUsr)) // SI LA REQUETE A FONCTIONNE
 		{
 			if($usr = $resultatReq->fetch()) // SI J'ARRIVE A EXTRAIRE UN RESULTAT

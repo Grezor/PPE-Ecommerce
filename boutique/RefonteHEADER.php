@@ -8,45 +8,45 @@
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <meta name="keywords" content="Resort Inn Responsive , Smartphone Compatible web template , Samsung, LG, Sony Ericsson, Motorola web design" />
     <!-- //for-mobile-apps -->
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-    <link href="css/font-awesome.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/chocolat.css" type="text/css" media="screen">
-    <link href="css/easy-responsive-tabs.css" rel='stylesheet' type='text/css' />
-    <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" property="" />
-    <link rel="stylesheet" href="css/jquery-ui.css" />
-    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
-    <script type="text/javascript" src="js/modernizr-2.6.2.min.js"></script>
+    <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="../css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/chocolat.css" type="text/css" media="screen">
+    <link href="../css/easy-responsive-tabs.css" rel='stylesheet' type='text/css' />
+    <link rel="stylesheet" href="../css/flexslider.css" type="text/css" media="screen" property="" />
+    <link rel="stylesheet" href="../css/jquery-ui.css" />
+    <link href="../css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <script type="text/javascript" src="../js/modernizr-2.6.2.min.js"></script>
     <!--fonts-->
     <link href="//fonts.googleapis.com/css?family=Oswald:300,400,700" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Federo" rel="stylesheet">
     <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,900" rel="stylesheet">
     <!--//fonts-->
-<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script type="text/javascript" src="../js/jquery-2.1.4.min.js"></script>
     <!-- contact form -->
-    <script src="js/jqBootstrapValidation.js"></script>
+    <script src="../js/jqBootstrapValidation.js"></script>
     <!-- /contact form -->
     <!-- Calendar -->
-    <script src="js/jquery-ui.js"></script>
+    <script src="../js/jquery-ui.js"></script>
     <!-- //Calendar -->
     <!-- gallery popup -->
-    <link rel="stylesheet" href="css/swipebox.css">
-    <script src="js/jquery.swipebox.min.js"></script>
+    <link rel="stylesheet" href="../css/swipebox.css">
+    <script src="../js/jquery.swipebox.min.js"></script>
     <!-- //gallery popup -->
     <!-- start-smoth-scrolling -->
-    <script type="text/javascript" src="js/move-top.js"></script>
-    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript" src="../js/move-top.js"></script>
+    <script type="text/javascript" src="../js/easing.js"></script>
     <!-- start-smoth-scrolling -->
     <!-- flexSlider -->
-    <script defer src="js/jquery.flexslider.js"></script>
+    <script defer src="../js/jquery.flexslider.js"></script>
 
     <!-- //flexSlider -->
-    <script src="js/responsiveslides.min.js"></script>
+    <script src="../js/responsiveslides.min.js"></script>
 
     <!--search-bar-->
-    <script src="js/main.js"></script>
+    <script src="../js/main.js"></script>
     <!--//search-bar-->
     <!--tabs-->
-    <script src="js/easy-responsive-tabs.js"></script>
+    <script src="../js/easy-responsive-tabs.js"></script>
     <script>
         $(function() {
             $("#datepicker,#datepicker1,#datepicker2,#datepicker3").datepicker();
@@ -169,7 +169,7 @@
     <div class="arr-w3ls">
         <a href="#home" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
     </div>
-    <script type="text/javascript" src="js/bootstrap-3.1.1.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap-3.1.1.min.js"></script>
     <!-- //smooth scrolling -->
 </body>
 </html>

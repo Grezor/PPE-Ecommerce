@@ -1,10 +1,11 @@
-
-
-
 <?php
 
 //if (session_status() !== PHP_SESSION_ACTIVE) {session_start();}
   if(session_id() == '' || !isset($_SESSION)){session_start();}
+
+  if(!isset($_SESSION["username"])) header("location:login.php");
+
+    
   include '../db.php';
   include 'header.php';
 ?>
@@ -71,12 +72,41 @@
     line-height: 1.2rem;
   }
 </style>
-
+<div id="availability-agileits">
+<div class="col-md-3 book-form-left-w3layouts">
+  <h2>RESERVATION ?</h2>
+</div>
+<div class="col-md-9 book-form">
+         <form action="#" method="post">
+          <div class="fields-w3ls form-left-agileits-w3layouts ">
+              <p>Type de Bornes</p>
+              <select class="form-control">
+                <option>Prenium Familiale</option>
+                <option>Prenium</option>
+                <option>Econmique Familiale</option>
+                <option>Economique</option>
+              </select>
+          </div>
+          <div class="fields-w3ls form-date-w3-agileits">
+                    <p>Date de début</p>
+                  <input  id="datepicker1" name="Text" type="text" value="Select Date" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
+                </div>
+                <div class="fields-w3ls form-date-w3-agileits">
+                    <p>Date de fin</p>
+                  <input  id="datepicker2" name="Text" type="text" value="Select Date" onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'mm/dd/yyyy';}" required="">
+                </div>
+          
+          <div class="form-left-agileits-submit">
+              <input id="check_dispo" type="submit" value="Voir les disponibilité">
+          </div>
+        </form>
+      </div>
+      <div class="clearfix"> </div>
+</div>
+  <hr>
 <div class="container">
 
-  <br>  
-  <p class="text-center">Lache un like si tu kiffe bat**d  -  On se calme ,<a href="images/clown.gif" target="about_blank">  c'est de l'HUMOUR !</a></p>
-  <hr>
+
 
 
   <div class="row" id="borne_container"></div> 
@@ -86,24 +116,45 @@
 
   $(document).ready(function(){
 
-    $.post( "API_ecommerce.php", { req_api : "get_bornesInfos" } , function( data ) { 
-      var bornes = JSON.parse(data);
+    $.post( "API_ecommerce.php", { req_api : "get_bornesInfos" } , function( data ) { //on POST sur url (1er arg) , les var du second arg , et le retour du fichier php est le "data" dans la function (3iéme arg) 
+    /* RAPPEL dans un post en JQ/AJAX on a >>> post( url , { phpVar : localVar , etc } , function(php result){callback....} ) */
+      var bornes = JSON.parse(data);// on parse le Json to JS var 
 
-      console.log(bornes);
-      $.each( bornes , function(){
-        insert_newProduct(this);
+      $.each( bornes , function(){ // for each ele in bornes
+        insert_newProduct(this); //( borne => this )
       })
+      /* ////////////////////// */
+      /* BTN POUR ADD AU PANIER */ 
+      /* ////////////////////// */
+      $('.bottom-wrap > a').on('click' , function(e){ // e est l'handler de fct attaché a l'event du selecteur  ( ici le "<a>" sous les element de class "bottom-wrap" es le selecteur)
+          e.preventDefault();
+
+          var id_produit = $(this).attr('href');
+
+            /* par défaut la qtt est pour l'instant de 1 , rajouté du html pour permmtre au client de choisir le montant de son produit ... */ 
+            /* RAPPEL dans un post en JQ/AJAX on a >>> post( url , { phpVar : localVar , etc } , function(php result){callback....} ) */
+        $.post( "API_ecommerce.php", { req_api : "update_productInPanierByID" , pdt_id : id_produit , quantite : 1 } , function( data ) { 
+            var tmpData = JSON.parse(data);
+            let clientMsg = tmpData=="good"?"Produit ajouté au panier !":"WATSOOONN , il ya comme un probléme !";
+            alert(clientMsg);
+
+        })
+      })
+        /* ////////////////////// */
+        /* ////////////////////// */
+        /* ////////////////////// */
+
 
       function insert_newProduct( p_infos ){
         let container = $("<div></div>").attr({'class' : 'col-md-4 img-thumbnail pdct_cont'});
           let figure = $("<figure></figure>").attr({'class' : 'card card-product'});
             let img = $("<div></div>")
             .attr({'class' : 'img-wrap'})
-            .append("<img src='images/"+ p_infos.img_url +"' class='img-fluid img-thumbnail'>");
+            .append("<img src='../images/"+ p_infos.img_url +"' class='img-fluid img-thumbnail'>");
 
             let figcaption = $("<figcaption></figcaption>")
             .attr({"class" : "info-wrap"})
-            .append('<h3 class="title">'+p_infos.name+'</h3><br><p class="desc">'+p_infos.description+'</p><hr>');
+            .append('<h3 class="title">'+p_infos.nom+'</h3><br><p class="desc">'+p_infos.description+'</p><hr>');
 
             let rating = $("<div></div>")
             .attr({'class' : 'rating-wrap'})
@@ -116,7 +167,7 @@
 
             let prixContainer = $("<div></div>")
               .attr({'class' : 'bottom-wrap'})
-              .append('<a href="" class="btn btn-sm btn-primary float-right">Order Now</a> ');
+              .append('<a href="'+ p_infos.id +'" class="btn btn-sm btn-primary float-right">Order Now</a> ');
 
         $('#borne_container').append(
           container.append(
@@ -132,7 +183,13 @@
 
   })
 </script>
-
+<!-- js -->
+<script src="../js/jquery-ui.js"></script>
+<script>
+    $(function() {
+      $( "#datepicker,#datepicker1,#datepicker2,#datepicker3" ).datepicker();
+    });
+</script>
 
 
 

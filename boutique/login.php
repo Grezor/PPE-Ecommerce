@@ -18,11 +18,11 @@ include("header.php");
 <form>
 <div id="connexionForm">
     <div class="form-group">
-    <label for="exampleInputEmail1">Email address</label>
+    <label for="exampleInputEmail1">Nom Utilisateur</label>
     <input type="email" class="form-control" id="loginName" aria-describedby="emailHelp" placeholder="Enter email">
   </div>
   <div class="form-group">
-    <label for="exampleInputPassword1">Password</label>
+    <label for="exampleInputPassword1">Mot de passe</label>
     <input type="password" class="form-control" id="loginPassword" placeholder="Password">
   </div>  
 </div>
@@ -105,6 +105,10 @@ include("header.php");
             $('#connexionBtn').toggle();
             $('#registerBtn').toggle();
         })
+        /////////////////////////////
+        //NE PA SUPRIMER AU DESSUS //
+        /////////////////////////////
+
 
 
 

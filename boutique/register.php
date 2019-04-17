@@ -24,7 +24,7 @@ include '../db.php';
             $password = md5($password);
 
             $req = "
-INSERT INTO `users` (`id`, `username`, `email`, `password`, `confirmation_token`, `confirmed_at`, `reset_token`, `reset_at`, `roles` , `role_id`) VALUES (NULL, '".$username."', '".$email."', '".$password."', NULL, NULL, NULL, NULL, 'menber' ,'1');";
+INSERT INTO `users` (`id`, `username`, `email`, `password`, `confirmation_token`, `confirmed_at`, `reset_token`, `reset_at`, `roles`) VALUES (NULL, '".$username."', '".$email."', '".$password."', NULL, NULL, NULL, NULL, 'menber');";
 
             if($bdd->query
                 ($req)){

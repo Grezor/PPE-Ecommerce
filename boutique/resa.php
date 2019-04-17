@@ -107,6 +107,8 @@ if(!isset($_SESSION["username"])){
         z-index: 100;
       }
       .gallery {
+        
+      overflow-x: hidden;
       -webkit-column-count: 3;
       -moz-column-count: 3;
       column-count: 3;
@@ -241,8 +243,8 @@ if(!isset($_SESSION["username"])){
       <div class="container">
 
         <div id="gal_infos_container" class="col-md-12 d-flex justify-content-center mb-5">
-          <button type="button" class="btn btn-outline-light waves-effect info_board" style="background-color: #6faabdde">Crédits : ?</button>
-          <button type="button" class="btn btn-outline-light waves-effect info_board" style="background-color: #dcb800d9">Liked : ?</button>
+          <button type="button" class="btn btn-outline-light waves-effect info_board" style="background-color: #6faabdde">Crédits : <em id="nbCredit">0</em></button>
+          <button type="button" class="btn btn-outline-light waves-effect info_board" style="background-color: #dcb800d9">Liked : <em id="nbLike">0</em></button>
         </div>        
         <!-- Grid column -->
         <div id="gal_btn_container" class="col-md-12 d-flex justify-content-center mb-5">
@@ -328,8 +330,9 @@ if(!isset($_SESSION["username"])){
 $(document).ready(function(){
 
     $.post( "API_ecommerce.php", { req_api : "get_userReservation" } , function( data ) {
+      console.log(data);
       var resa = JSON.parse(data);
-
+      console.log(resa);""
       let cnt = 1;
       $.each(resa, function () {
 
@@ -338,7 +341,7 @@ $(document).ready(function(){
           '<td>'+ cnt +'</td>'+//numero de la resa par rapport au resa du client
           '<td>'+ this.date_beg +'</td>'+
           '<td>'+ this.date_end +'</td>'+
-          '<td><span id="'+this.id+'" class="fill_span folder_active"></span></td>')
+          '<td><span id="'+this.id+'" class="fill_span folder_active" data-credit="'+this.forfait+'" data-like="'+this.likes+'"></span></td>')
         .appendTo('#table'+this.status);// accede a lid du status 1/past 2/current 3/next
 
         cnt++;
@@ -352,7 +355,7 @@ $(document).ready(function(){
         $.post( "API_ecommerce.php", { req_api : "get_photosFolderByResaID" , resa_id : resaId } , function( data ) { 
           var photos = JSON.parse(data);
 
-          if (! isEmpty(photos)) {
+          if (! isEmpty(photos)) {//si il existe des photo liée a la résa
 
             $('#gallery').empty();// on vide les eventuels précédent chargement
 
@@ -372,9 +375,15 @@ $(document).ready(function(){
 
               $('<div></div>')
               .addClass('mb-3 pics animation all '+day+' '+ (this.estAime==1?"chosen":" ") )
-              .append('<img class="img-fluid img-like'+this.estAime+'" src="../'+this.url+'" alt="'+this.id+'">')
+              .append('<img class="img-fluid img-like'+this.estAime+'" src="../images/'+this.url+'" alt="'+this.id+'">')
               .appendTo("#gallery");
             })
+
+            //ICI ON SET LE NB DE PHOTO DEJA LIKE ET LE CREDIT DE PHOTO RESTANT
+
+            $('#nbCredit').text( fold.attr('data-credit') );
+            $('#nbLike').text( fold.attr('data-like') );
+            // eh oui
 
             $('#modal_gallery').fadeIn( 500 );
 
@@ -403,11 +412,21 @@ $(document).ready(function(){
             //////////////////////////////////////////////////
             /*  ici ont va géré le LIKE / DISLIKE DES PHOTOS*/
             //////////////////////////////////////////////////
+            
+            
 
+
+            // ensuite on gére le like au clic d'une photo
             $('.all > img').on('click' , function(){
-
+              //on check si les crédit sont suffisant
               let ele = $(this);
               let newStatut =ele.parent().hasClass('chosen')?'0':'1';
+
+              let credit = $('#nbCredit').text();
+              let like = $('#nbLike').text();
+
+              if(credit==0 && newStatut === '1') {alert('out of credit range') ;return false};
+
               var photoId = ele.attr("alt");
 
               $.post( "API_ecommerce.php", { req_api : "update_likePhotoStatusByID" , photo_id : photoId , new_statut : newStatut } , function( data ) { 
@@ -415,7 +434,17 @@ $(document).ready(function(){
                 if ( result == "updated") {
 
                     ele.parent().toggleClass('chosen');
-                    ele.toggleClass('img-like0 img-like1')
+                    ele.toggleClass('img-like0 img-like1');
+
+                    if(newStatut === '0'){ 
+                      $('#nbCredit').text( parseInt(credit)+1 );
+                      $('#nbLike').text( parseInt(like)-1 );  
+                      fold.attr({ "data-credit" :  parseInt(credit)+1, "data-like" : parseInt(like)-1 })
+                    }else{
+                      $('#nbCredit').text( parseInt(credit)-1 );
+                      $('#nbLike').text( parseInt(like)+1 );  
+                      fold.attr({ "data-credit" :  parseInt(credit)-1, "data-like" : parseInt(like)+1 })                      
+                    }
 
                 }else{
                   alert('une erreur est survenue')

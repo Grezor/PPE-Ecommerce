@@ -13,7 +13,7 @@ La société « ChopTaPhoto » est une société de location de borne photo trav
 - Photos
 
 ## Schéma d'infrastructure :
-en cours 
+`<liens Google drive>` : <> 
 ## Diagramme de cas d'usage :
 - Un client qui se connecte est capable de voir les produits, les ajouter au panier et affin de valider sa commande. 
 - Il doit s'inscrire ou se connecter. 
@@ -25,6 +25,12 @@ en cours
 
 ## Contrainte de l'environnement :
  
+ - Cahier des charges
+ - Langage utilisés : PHP, JS, SQL
+ - Outil de versionning: GITHUB
+ - Library : Jquery, Boostrap
+
+## Liens galerie : 
 
 
 

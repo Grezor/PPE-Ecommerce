@@ -4,7 +4,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Resort Inn a Hotel Category Flat Bootstrap Responsive  Website Template | Home :: W3layouts</title>
+<title>ChopTaPhoto</title>
 <!-- for-mobile-apps -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -40,9 +40,15 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <h3><a class="navbar-brand" href="../index.php">Choptaphoto <br>
-                            <p class="logo_w3l_agile_caption">Votre boutique</p>
-                    </a></h3>
+                   <style>
+                   .logo{
+                       height:70px;
+                       margin-top:0;
+                       color:red;
+                   }
+                   </style>
+                   <h3 class="logo">ChoptaPhoto</h3>
+									<a href="boutique/login.php">	<img src="images/logo.png"  alt=" " class="logo menu__list"></a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
@@ -241,22 +247,22 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <li>
                         <div class="w3_grid_effect">
                             <span class="cbp-ig-icon "><img src="./images/impression.jpg" style="width:60px;height:55px"></span>
-                            <h4 class="cbp-ig-title">Impression Rapide</h4>
+                            <h4 class="cbp-ig-title">Impression photo</h4>
                             <span class="cbp-ig-category">ChopTaPhoto</span>
                         </div>
                     </li>
                     <li>
                         <div class="w3_grid_effect">
                             <span class="cbp-ig-icon w3_users"></span>
-                            <h4 class="cbp-ig-title">Divers</h4>
-                            <span class="cbp-ig-category"> ChopTaPhoto</span>
+                            <h4 class="cbp-ig-title">utilisation</h4>
+                            <span class="cbp-ig-category"> rapide</span>
                         </div>
                     </li>
                     <li>
                         <div class="w3_grid_effect">
                             <span class="cbp-ig-icon w3_ticket"></span>
-                            <h4 class="cbp-ig-title">Controle par Wifi</h4>
-                            <span class="cbp-ig-category"> ChopTaPhoto</span>
+                            <h4 class="cbp-ig-title">Connexion </h4>
+                            <span class="cbp-ig-category"> WIFI</span>
                         </div>
                     </li>
                 </ul>
@@ -636,7 +642,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
     </section>
 <!-- /contact -->
 			<div class="copy">
-		        <p>© 2017 Resort Inn . All Rights Reserved | Design by <a href="http://w3layouts.com/">W3layouts</a> </p>
+		        <p>© 2017 ChoptaPhoto . All Rights Reserved | Design by <a href="http://w3layouts.com/">W3layouts</a> </p>
 		    </div>
 <!--/footer -->
 

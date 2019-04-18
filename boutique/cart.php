@@ -34,7 +34,7 @@
 </style>
 <section class="jumbotron text-center">
     <div class="container">
-        <h1 class="jumbotron-heading">Don't worry, Be happy ! :)</h1>
+      
      </div>
 </section>
 

@@ -264,7 +264,6 @@ function get_borneDispoEntreDeuxDate($date_beg, $date_end, PDO $bdd)
 
 if (isset($_POST['req_api'], $_POST['date_debut'], $_POST['date_fin']) && $_POST['req_api'] == 'get_borneDispoEntreDeuxDate') {
 
-
     $result = get_borneDispoEntreDeuxDate($_POST['date_debut'], $_POST['date_fin'], $bdd);// on oublie pas de lui passé la bdd ,sinon return undefined
 
     utf8_encode_deep($result);  // on prevent les accent et autre merde

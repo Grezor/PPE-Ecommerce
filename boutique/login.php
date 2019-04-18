@@ -15,8 +15,8 @@ include("header.php");
 <div class="container">
 
 
-<form>
-<div id="connexionForm">
+<form class="form-signin">
+<div id="connexionForm" >
     <div class="form-group">
     <label for="exampleInputEmail1">Nom Utilisateur</label>
     <input type="email" class="form-control" id="loginName" aria-describedby="emailHelp" placeholder="Enter email">
@@ -52,10 +52,42 @@ include("header.php");
 
   <button id="connexionBtn" class="btn btn-primary">Connexion</button>
   <button id="registerBtn" class="btn btn-warning" style="display: none">Inscription</button>
-  <button id="toggleBtn" class="btn btn-info">Pas de compte ?</button>
+  <button id="toggleBtn" class="btn-inscription">Pas de compte ?</button>
 </form>
 
 
+<style>
+.form-signin{
+    margin-top:50px;
+}
+
+btn-inscription {
+    color: #fff !important;
+    border-color: #269abc;
+}
+
+.btn-inscription {
+    display: inline-block;
+    padding: 6px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: normal;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background-color: #ffce14 !important;
+    border: 1px solid transparent;
+    border-radius: 4px;
+}
+</style>
 
 
     <!-- 

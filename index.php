@@ -47,8 +47,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                        color:red;
                    }
                    </style>
-                   <h3 class="logo">ChoptaPhoto</h3>
-									<a href="boutique/login.php">	<img src="images/logo.png"  alt=" " class="logo menu__list"></a>
+                 <a href="boutique/login.php">	<img src="images/logo.png"  alt=" " class="logo menu__list"></a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse navbar-right" id="bs-example-navbar-collapse-1">
@@ -87,10 +86,9 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 
         </div>
     </div>
-<!-- //header -->
-		<!-- banner -->
+
 	<div id="home" class="w3ls-banner">
-		<!-- banner-text -->
+
 		<div class="slider">
 			<div class="callbacks_container">
 				<ul class="rslides callbacks callbacks1" id="slider4">

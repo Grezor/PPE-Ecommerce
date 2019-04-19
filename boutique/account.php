@@ -8,7 +8,7 @@ if (session_id() == '' || !isset($_SESSION)) {
 
 include '../db.php';
 include 'header.php';
-
+include '../boutique/API_ecommerce.php';
 ?>
 <style type="text/css">
     h1 {
@@ -30,7 +30,7 @@ include 'header.php';
         <div class="form-group row">
             <label for="nom" class="col-sm-2 col-form-label">Nom</label>
             <div class="col-sm-10">
-                <input type="text" class="form-control form-control-plaintext" id="nom" value="email@example.com">
+                <input type="text" class="form-control form-control-plaintext" id="nom" value="email@example.com" action= <?php update_username();?>>
             </div>
         </div>
         <div class="form-group row">

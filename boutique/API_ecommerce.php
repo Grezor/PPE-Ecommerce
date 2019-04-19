@@ -47,10 +47,12 @@ function upd_infosUserById($userId, $bdd_champ, $newInfo, PDO $bdd)
 
     // verifie quel champs on veux mofidier
     // si le champs bdd et égale au input password alors tu crypt en md5
+    // modifie le mot de passe 
     if ($bdd_champ == "password") {
         $newInfo = md5($newInfo);
     }
 
+    // requete pour mettre a jour les nouvelles données en bdd
     $req = "UPDATE users SET " . $bdd_champ . " = '" . $newInfo . "' WHERE `users`.`id` = " . $userId;
     if ($bdd->query($req)) $output = 'updated';
     else $output = 'problème dans la requête';
@@ -68,6 +70,11 @@ if (isset($_POST['req_api'], $_POST['info_champ'], $_POST['info_value'], $_POST[
     }
     echo json_encode($result);
 }
+
+
+
+
+
 
 
 /* la déclartion de la fct  LE SETTER EN GROS */

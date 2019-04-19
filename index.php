@@ -228,7 +228,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                     <li>
                         <div class="w3_grid_effect">
                             <span class="cbp-ig-icon "><img src="./images/livraison.jpg" style="width:60px;height:55px"></span>
-                            <h4 class="cbp-ig-title">Livraison sous 24h, 7/7 jour</h4>
+                            <h4 class="cbp-ig-title">Livraison 7/7 jour</h4>
                             <span class="cbp-ig-category"> ChopTaPhoto</span>
                         </div>
                     </li>

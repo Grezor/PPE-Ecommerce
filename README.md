@@ -25,6 +25,9 @@ en cours
 
 ## Dossier Seeds :
 Ce dossier permet de générer des fausses données dans la base de donnée
+- repertoire (seeds), langage PHP
+- pour executer le fichier : php seeds\product.php
+- puis vérifier en base de donnée
 
 ## Contrainte de l'environnement :
  

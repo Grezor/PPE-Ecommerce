@@ -24,8 +24,9 @@ en cours
 <https://trello.com/b/fUqy4Kvj>
 
 ## Contrainte de l'environnement :
- 
-
+## Repertoire Seeds:
+ce répertoire permet de crée de fausses données en base de données, ce qui permet de faire des tests.
+pour executer ce fichier php seeds\product.php, ensuite vérifier la bdd. 
 
 
 

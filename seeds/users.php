@@ -1,0 +1,29 @@
+<?php
+//recupere la librairie
+require __DIR__ . "/../vendor/autoload.php";
+// recupere le fichier connexion bdd
+require __DIR__ . "/../db.php";
+
+ echo "seeds start \n";
+$faker = Faker\Factory::create('fr_FR');
+
+
+
+for ($i = 0; $i < 20; $i++){
+    // nom aléatoire
+    $name = $faker->firstName;
+    // tableau des champs que l'on souahite
+    $user = [
+        ':username' =>$name,
+        ':email' => "{$name}@gmail.com",
+        ':password' => password_hash('123456789', PASSWORD_DEFAULT, ['cost' =>12])
+    ];
+    // Requete Insert
+    $requeteInsert = $bdd ->prepare('INSERT INTO users (username, email, password)
+                                              values (:username, :email, :password)');
+
+    // execute requete
+    $requeteInsert->execute($user);
+}
+
+echo "seeds finish \n";

@@ -23,6 +23,9 @@ en cours
 ## Trello:
 `<liens trello>` : <https://trello.com/b/fUqy4Kvj>
 
+## Dossier Seeds :
+Ce dossier permet de générer des fausses données dans la base de donnée
+
 ## Contrainte de l'environnement :
  
 

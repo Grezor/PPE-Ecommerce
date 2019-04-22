@@ -49,7 +49,7 @@ function upd_infosUserById($userId, $bdd_champ, $newInfo, PDO $bdd)
     // si le champs bdd et égale au input password alors tu crypt en md5
     // modifie le mot de passe 
     if ($bdd_champ == "password") {
-        $newInfo = md5($newInfo);
+        $newInfo = password_hash($newInfo, PASSWORD_DEFAULT);
     }
 
     // requete pour mettre a jour les nouvelles données en bdd
@@ -63,7 +63,8 @@ function upd_infosUserById($userId, $bdd_champ, $newInfo, PDO $bdd)
 if (isset($_POST['req_api'], $_POST['info_champ'], $_POST['info_value'], $_POST['password'])
     && $_POST['req_api'] == 'upd_infosUserById') {
     // le passord ecrit et en session
-    if (md5($_POST['password']) == $_SESSION['password']) {
+    if (password_verify($_POST['password'], $_SESSION['password'])) {
+
         $result = upd_infosUserById($_SESSION['id'], $_POST['info_champ'], $_POST['info_value'], $bdd);
     } else {
         $result = "mauvais password";

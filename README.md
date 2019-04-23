@@ -21,11 +21,12 @@ en cours
 - Voir les photos liées a la réservation, aimer ou non, valider les photos et de les supprimer   
 
 ## Trello:
-`<liens trello>` : <https://trello.com/b/fUqy4Kvj>
+<https://trello.com/b/fUqy4Kvj>
 
 ## Contrainte de l'environnement :
- 
-
+## Repertoire Seeds:
+ce répertoire permet de crée de fausses données en base de données, ce qui permet de faire des tests.
+pour executer ce fichier php seeds\product.php, ensuite vérifier la bdd. 
 
 
 

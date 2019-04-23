@@ -73,11 +73,6 @@ if (isset($_POST['req_api'], $_POST['info_champ'], $_POST['info_value'], $_POST[
 }
 
 
-
-
-
-
-
 /* la déclartion de la fct  LE SETTER EN GROS */
 function get_userReservation($userId, PDO $bdd)
 {

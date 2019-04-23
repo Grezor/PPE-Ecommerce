@@ -10,6 +10,7 @@ if (!isset($_SESSION["username"])) header("location:login.php");
 
 include '../db.php';
 include 'header.php';
+
 ?>
 
 <style type="text/css">
@@ -175,10 +176,7 @@ include 'header.php';
 
                 })
             })
-            /* ////////////////////// */
-            /* ////////////////////// */
 
-            /* ////////////////////// */
 
 
             function insert_newProduct(p_infos) {
@@ -197,9 +195,19 @@ include 'header.php';
                     .append('<div class="label-rating"> reste ' + p_infos.stock +'</div><div class="label-rating"><span class="badge badge-warning">' + p_infos.promo +' %</span></div>');
                 /*//////////////////////////////////////*/
 
+                // var newprix = 0;
+                // // mettre if sitestter si oui ou non
+                // if sur p_infos.promo
+                // //newprix = p_infos.prix * quelque
+                //
+                //
+                // // cree une variable temporaire avec nv prix
+                //
+                // console.log(p_infos);
+
                 let prix = $("<div></div>")
                     .attr({'class': 'price-wrap h5'})
-                    .append('<span class="price-new">' + p_infos.prix + ' €</span> <del class="price-old">1980 €</del>');
+                    .append('<span class="price-new">' + p_infos.prix/*var new prix*/ + ' €</span> <del class="price-old">1980 €</del>');
 
                 let prixContainer = $("<div></div>")
                     .attr({'class': 'bottom-wrap'})
@@ -213,7 +221,35 @@ include 'header.php';
                             .append(prixContainer.append(prix))
                     )
                 )
+
+                // if(p_infos.promo > 0){
+                //     {
+                //         var nbr = $('.price-new').text();
+                //         console.log(nbr);
+                //         //$('.price-new').text("new prix");
+                //
+                //
+                //
+                //
+                //     }
+                // }else{
+                //     //append attacher un element
+                //     // exemple $(this).css({color: 'green'});
+                //     {
+                //         console.log("coucou");
+                //         $('.price-old').hide();
+                //
+                //
+                //     }
+                //
+                //
+                // }
             }
+
+
+
+
+
 
         })
 

@@ -23,8 +23,7 @@ if (isset($_POST['infos'])) {
 
         $password = password_hash($password, PASSWORD_DEFAULT, ['cost' => 12]);
 
-        $req = "
-INSERT INTO `users` (`id`, `username`, `email`, `password`, `confirmation_token`, `confirmed_at`, `reset_token`, `reset_at`, `roles`) VALUES (NULL, '" . $username . "', '" . $email . "', '" . $password . "', NULL, NULL, NULL, NULL, 'menber');";
+        $req = "INSERT INTO `users` (`id`, `username`, `email`, `password`, `confirmation_token`, `confirmed_at`, `reset_token`, `reset_at`, `roles`) VALUES (NULL, '" . $username . "', '" . $email . "', '" . $password . "', NULL, NULL, NULL, NULL, 'menber');";
 
         if ($bdd->query
         ($req)) {

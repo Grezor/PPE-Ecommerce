@@ -8,7 +8,7 @@ if (session_id() == '' || !isset($_SESSION)) {
 
 include '../db.php';
 include 'header.php';
-
+$user_id = $_SESSION['username']->id;
 ?>
 <style type="text/css">
     h1 {
@@ -16,7 +16,7 @@ include 'header.php';
         text-align: center;
     }
 </style>
-<h1>Bienvenue <?php echo $_SESSION['username']; ?></h1>
+<h1>Bienvenue <?= $_SESSION['username']->roles; ?> <?php echo $_SESSION['username']; ?></h1>
 
 <div class="container-fluid customCont">
     <form>

@@ -369,7 +369,7 @@ $(document).ready(function(){
                 }
               }
 
-              let day = (this.date_prise).substring(5, 10);
+              let day = (this.date_prise).substring(0, 10);
               add(Days_section , day);
 
 

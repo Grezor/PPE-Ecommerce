@@ -9,7 +9,7 @@ $faker = Faker\Factory::create('fr_FR');
 
 
 
-for ($i = 0; $i < 200; $i++){
+for ($i = 0; $i < 20; $i++){
     // nom aléatoire
     $name = $faker->firstName;
 

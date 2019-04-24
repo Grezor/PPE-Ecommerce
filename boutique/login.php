@@ -53,8 +53,9 @@ include("header.php");
   <button id="connexionBtn" class="btn btn-primary">Connexion</button>
   <button id="registerBtn" class="btn btn-warning" style="display: none">Inscription</button>
   <button id="toggleBtn" class="btn-inscription">Pas de compte ?</button>
-</form>
 
+</form>
+    <a href="reset.php">reset</a>
 
 <style>
 .form-signin{

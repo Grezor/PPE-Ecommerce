@@ -70,7 +70,7 @@
                         <span class="icon-bar"></span>
                     </button>
                     <h3><a class="navbar-brand" href="../index.php">Choptaphoto <br>
-                            <p class="logo_w3l_agile_caption">Votre boutique</p>
+                            <p class="logo_w3l_agile_caption">Garder un souvenir</p>
                         </a></h3>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -90,16 +90,14 @@
                               }
                             ?>
                             <li class="menu__item"><a href="../index.php#contact" class="menu__link scroll">Contact</a></li>
-                            <li class="menu__item"><a href="#"><i class="ddUser fa fa-fw fa-user"></i>
+                            <li class="menu__item"><a href="login.php">Connexion</a>
                                 <div class="guiguiMainDD">
                                 <?php
                                       if(isset($_SESSION['username'])){
                                         echo '<button class="btn"><a href="logout.php">Deconnexion</a></button>';
                                         echo '<button class="btn"><a href="account.php">Paramêtres</a></button>';
                                       }
-                                      else{
-                                        echo '<button class="btn"><a href="login.php">Connexion</a></button>';
-                                      }
+
                                 ?>
                                 </div>
                             </a></li>

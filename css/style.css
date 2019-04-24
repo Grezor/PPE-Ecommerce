@@ -772,7 +772,7 @@ li.menu__item:nth-child(6) {
 	font-family: 'Lato', sans-serif;
 }
 .book-form input[type="text"]{
-	 border: 2px solid #fff;
+	 border: 2px solid #fff700;
 }
 .book-form form input[type="submit"] {
     text-transform: capitalize;

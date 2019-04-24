@@ -26,7 +26,21 @@ en cours
 ## Contrainte de l'environnement :
 ## Repertoire Seeds:
 ce répertoire permet de crée de fausses données en base de données, ce qui permet de faire des tests.
-pour executer ce fichier php seeds\product.php, ensuite vérifier la bdd. 
+- librairie github : <https://github.com/fzaninotto/Faker>
+- Installation : composer require fzaninotto/faker
+- creation dossier seed 
+    ```php
+    <?php
+    //recupere la librairie
+    require __DIR__ . "/../vendor/autoload.php";
+    // recupere le fichier connexion bdd
+    require __DIR__ . "/../db.php";  
+    // création des données en (Français)
+    $faker = Faker\Factory::create('fr_FR');
+  ```
+- plus d'infos dans le dossier "seeds"
+- executer ce fichier dans un terminal > php seeds\product.php
+- ensuite vérifier la base de donnée. 
 
 
 

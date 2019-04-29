@@ -43,5 +43,7 @@ ce répertoire permet de crée de fausses données en base de données, ce qui p
 - ensuite vérifier la base de donnée. 
 
 
-
+## Maildev : 
+- MailDev est un serveur SMTP couplé à une interface Web (franchement jolie qui plus est) qui intercepte les emails émanant de votre serveur Web afin de les visualiser et les tester. Les emails interceptés n’étant pas délivrés, vous n’aurez plus à modifier les adresses de destinataires lors de vos tests.
+- <https://blog.juansorroche.com/memo-maildev>
 

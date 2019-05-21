@@ -74,7 +74,7 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                         echo '<button class="btn"><a href="boutique/account.php">Paramêtres</a></button>';
                                       }
                                       else{
-                                        echo '<button class="btn"><a href="boutique/login.php">Connexion</a></button>';
+                                        echo '<button class="btn"><a href="boutique/login2.php">Connexion</a></button>';
                                       }
                                 ?>
                                 </div>
@@ -114,6 +114,20 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
                                     <h4>ChopTaPhoto</h4>
                                     <h3>Pour des Evenements amicaux & familiaux</h3>
                                     <p>Venez & Capturez votre moment</p>
+                                    <div class="agileits_w3layouts_more menu__item">
+                                        <a href="#" class="menu__link" data-toggle="modal" data-target="#myModal">En savoir plus</a>
+                                    </div>
+                                </div>
+                            </div>
+						</div>
+					</li>
+                    <li>
+                        <div class="w3layouts-banner-top w3layouts-banner-top1">
+                            <div class="container">
+                                <div class="agileits-banner-info">
+                                    <h4>ChopTaPhoto</h4>
+                                    <h3>Garder un souvenir graver dans votre album</h3>
+                                    <p>Choisisez le !</p>
                                     <div class="agileits_w3layouts_more menu__item">
                                         <a href="#" class="menu__link" data-toggle="modal" data-target="#myModal">En savoir plus</a>
                                     </div>

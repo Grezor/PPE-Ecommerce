@@ -14,10 +14,10 @@ if(!empty($_POST)){
     }
 
 }
-//require 'inc/header.php';
+require 'header.php';
 ?>
-
-<h1>Bonjour <?= $_SESSION['auth']->username; ?></h1>
+<div class="container">
+<h1>Bonjour <?= $_SESSION['auth']->username; ?></h1><?= $_SESSION['auth']->roles_id; ?>
 
 <form action="" method="post">
     <div class="form-group">
@@ -28,3 +28,4 @@ if(!empty($_POST)){
     </div>
     <button class="btn btn-primary">Changer mon mot de passe</button>
 </form>
+</div>

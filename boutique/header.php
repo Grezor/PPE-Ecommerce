@@ -90,17 +90,28 @@
                               }
                             ?>
                             <li class="menu__item"><a href="../index.php#contact" class="menu__link scroll">Contact</a></li>
-                            <li class="menu__item"><a href="login.php">Connexion</a>
+                           
+                            <?php // si l'utilisateur n'est pas admin, il n'affiche pas la partie admin
+                                 if (isset($_SESSION['auth'])): ?>
+                                    <li class="nav-item "><a class="nav-link" href="logout.php">Se deconnecter</a></>
+                                 <!-- Si la personnes est un admin alors il a le mennu admin -->
+                              
+                                 <?php else: ?>
+                                 <li class="nav-item">
+                              
+                          </li>
+                              <?php endif; ?>
+                            <!-- <li class="menu__item"><a href="login2.php">Connexion</a>
                                 <div class="guiguiMainDD">
                                 <?php
-                                      if(isset($_SESSION['username'])){
-                                        echo '<button class="btn"><a href="logout.php">Deconnexion</a></button>';
-                                        echo '<button class="btn"><a href="account.php">Paramêtres</a></button>';
-                                      }
+                                     // if(isset($_SESSION['username'])){
+                                     //   echo '<button class="btn"><a href="logout.php">Deconnexion</a></button>';
+                                     //   echo '<button class="btn"><a href="account.php">Paramêtres</a></button>';
+                                    //  }
 
                                 ?>
                                 </div>
-                            </a></li>
+                            </a></li> -->
                         </ul>
                     </div>
                 </div>

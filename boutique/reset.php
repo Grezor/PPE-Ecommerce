@@ -1,7 +1,7 @@
 <?php
 if(isset($_GET['id']) && isset($_GET['token'])){
-    require 'inc/db.php';
-    require 'inc/functions.php';
+    require '../inc/db.php';
+    require '../inc/functions.php';
     $req = $pdo->prepare('SELECT * FROM users WHERE id = ? AND reset_token IS NOT NULL AND reset_token = ? AND reset_at > DATE_SUB(NOW(), INTERVAL 30 MINUTE)');
     $req->execute([$_GET['id'], $_GET['token']]);
     $user = $req->fetch();
@@ -13,14 +13,14 @@ if(isset($_GET['id']) && isset($_GET['token'])){
                 session_start();
                 $_SESSION['flash']['success'] = 'Votre mot de passe a bien été modifié';
                 $_SESSION['auth'] = $user;
-                header('Location: account.php');
+                header('Location: account2.php');
                 exit();
             }
         }
     }else{
         session_start();
         $_SESSION['flash']['error'] = "Ce token n'est pas valide";
-        header('Location: login.php');
+        header('Location: login2.php');
         exit();
     }
 }else{
@@ -28,7 +28,7 @@ if(isset($_GET['id']) && isset($_GET['token'])){
     exit();
 }
 ?>
-<?php require 'inc/header.php'; ?>
+<?php // require 'inc/header.php'; ?>
 
     <h1>Réinitialiser mon mot de passe</h1>
 
@@ -48,4 +48,4 @@ if(isset($_GET['id']) && isset($_GET['token'])){
 
     </form>
 
-<?php require 'inc/footer.php'; ?>
+<?php//require 'inc/footer.php'; ?>

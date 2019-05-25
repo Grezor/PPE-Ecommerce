@@ -85,7 +85,7 @@
                                 echo '<li><a href="resa.php" class="menu__link">Mes Réservations</a></li>';
                                 echo '<li><a href="cart.php" class="menu__link"><i class="fa fa-shopping-cart"></i> Panier <span class="badge badge-light">0</span></a></li>';
                               }else{
-                                echo '<li class="menu__item"><a href="../index.php#rooms" class="menu__link scroll">Produits</a></li>';
+                                echo '<li class="menu__item"><a href="../boutique/products_old.php" class="menu__link scroll">Produits</a></li>';
                                 echo '<li class="menu__item"><a href="../index.php#about" class="menu__link scroll">A propos</a></li>';
                               }
                             ?>
@@ -112,6 +112,7 @@
                                 ?>
                                 </div>
                             </a></li> -->
+                          </li>
                         </ul>
                     </div>
                 </div>

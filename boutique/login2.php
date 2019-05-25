@@ -18,6 +18,7 @@ if(!empty($_POST) && !empty($_POST['username']) && !empty($_POST['password'])){
         $_SESSION['flash']['danger'] = 'Identifiant ou mot de passe incorrecte';
     }
 }
+
 ?>
 <?php require 'header.php'; ?>
 <h1>Se connecter</h1>

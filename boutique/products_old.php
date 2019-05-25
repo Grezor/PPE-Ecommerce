@@ -2,7 +2,7 @@
 
 //if (session_status() !== PHP_SESSION_ACTIVE) {session_start();}
   if(session_id() == '' || !isset($_SESSION)){session_start();}
-  include '../db.php';
+ require '../inc/db.php';
   include 'header.php';
 ?>
 
@@ -21,10 +21,10 @@
           $product_id = array();
           $product_quantity = array();
 
-          $result = $bdd->query('SELECT * FROM bornes');
-          if($result === FALSE){
-            die(mysql_error());
-          }
+          $result = $pdo->prepare('SELECT * FROM bornes');
+          // if($result === FALSE){
+          //   die(mysql_error());
+          // }
 
           if($result){
 

@@ -2,7 +2,7 @@
 
     //if (session_status() !== PHP_SESSION_ACTIVE) {session_start();}
     if(session_id() == '' || !isset($_SESSION)){session_start();}
-    // if(!isset($_SESSION["username"])) header("location:login.php");
+     if(!isset($_SESSION["auth"])) header("location:login.php");
 
     include '../db.php';
     include 'header.php';
@@ -105,6 +105,10 @@
             /* id: "1" // id_produit: "1" // id_user: "3" // img_url: "a1.jpg" // name: "borne_1" // prix: "599" // quantite: "3"*/
             $.each( result , function(){
 
+
+            
+
+                
 
                 let MainEle = $("<tr></tr>").attr({"class" : "product_line"});
 

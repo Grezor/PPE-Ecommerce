@@ -2,7 +2,8 @@
 
 
 session_start();
-if (!isset($_SESSION["username"])) {
+
+if (!isset($_SESSION["auth"])) {
     echo json_encode("session no exist");
     return false;
 }// on check au cas ou
@@ -176,6 +177,7 @@ function get_bornesInfos(PDO $bdd)
 {
 
     $output = array();
+    
     $getBornes = 'SELECT * FROM `produits` WHERE `type` = "borne"';
 
 
@@ -296,7 +298,7 @@ function update_productInPanierByID($id_user, $id_pdt, $qtt, PDO $bdd)
 }
 
 if (isset($_POST['req_api'], $_POST['pdt_id'], $_POST['quantite']) && $_POST['req_api'] == 'update_productInPanierByID') {
-    $result = update_productInPanierByID($_SESSION['id'], $_POST['pdt_id'], $_POST['quantite'], $bdd);// on oublie pas de lui passé la bdd ,sinon return undefined
+    $result = update_productInPanierByID($_SESSION['auth']->id, $_POST['pdt_id'], $_POST['quantite'], $bdd);// on oublie pas de lui passé la bdd ,sinon return undefined
 
 
     utf8_encode_deep($result);  // on prevent les accent et autre merde
@@ -321,7 +323,7 @@ function get_userPanierByID($user_id, PDO $bdd)
 }
 
 if (isset($_POST['req_api']) && $_POST['req_api'] == 'get_userPanierByID') {
-    $result = get_userPanierByID($_SESSION['id'], $bdd);
+    $result = get_userPanierByID($_SESSION['auth']->id, $bdd);
 
 
     utf8_encode_deep($result);  // on prevent les accent et autre merde

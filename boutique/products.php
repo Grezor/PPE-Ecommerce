@@ -7,7 +7,6 @@ if (session_id() == '' || !isset($_SESSION)) {
 
 
 
-
 include '../db.php';
 include 'header.php';
 
@@ -151,7 +150,7 @@ include 'header.php';
         $.post("API_ecommerce.php", {req_api: "get_bornesInfos"}, function (data) { //on POST sur url (1er arg) , les var du second arg , et le retour du fichier php est le "data" dans la function (3iéme arg)
             /* RAPPEL dans un post en JQ/AJAX on a >>> post( url , { phpVar : localVar , etc } , function(php result){callback....} ) */
             var bornes = JSON.parse(data);// on parse le Json to JS var
-
+console.log(bornes);
             $.each(bornes, function () { // for each ele in bornes
                 insert_newProduct(this); //( borne => this )
             })
@@ -162,6 +161,7 @@ include 'header.php';
                 e.preventDefault();
 
                 var id_produit = $(this).attr('href');
+                
 
                 /* par défaut la qtt est pour l'instant de 1 , rajouté du html pour permmtre au client de choisir le montant de son produit ... */
                 /* RAPPEL dans un post en JQ/AJAX on a >>> post( url , { phpVar : localVar , etc } , function(php result){callback....} ) */

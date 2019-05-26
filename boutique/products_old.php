@@ -11,7 +11,6 @@
 
 
 
-
 <div class="container">
   <div class="row" style="margin-top:30px;">
     <div class="small-12">
@@ -22,9 +21,9 @@
           $product_quantity = array();
 
           $result = $pdo->prepare('SELECT * FROM bornes');
-          // if($result === FALSE){
-          //   die(mysql_error());
-          // }
+          if($result === FALSE){
+            die(mysql_error());
+          }
 
           if($result){
 

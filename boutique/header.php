@@ -80,7 +80,8 @@
                             <li class="menu__item menu__item--current"><a href="../index.php" class="menu__link">Accueil</a></li>
                             <li class="menu__item"><a href="../index.php#gallery" class="menu__link scroll">Gallerie</a></li>
                             <?php
-                              if(isset($_SESSION['username'])){
+                              
+                              if(isset($_SESSION['auth'])){
                                 echo '<li><a href="products.php" class="menu__link">Produits</a></li>';
                                 echo '<li><a href="resa.php" class="menu__link">Mes Réservations</a></li>';
                                 echo '<li><a href="cart.php" class="menu__link"><i class="fa fa-shopping-cart"></i> Panier <span class="badge badge-light">0</span></a></li>';

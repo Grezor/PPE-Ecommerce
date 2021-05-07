@@ -64,8 +64,9 @@ To launch it you must have a local server (WAMP, Laragon, Xamp ...)
 # Project status 
 The project is currently archived, it is no longer updated by the project developers. 
 
-# Other information
+# Contributors
 
 - DUPLESSI Geoffrey
 - DOCKWILLER Guillaume 
-- AZZIBROUCK AZZILEY Franck Olivier 
+- AZZIBROUCK AZZILEY Franck Olivier
+- HAUSS Mathieu

@@ -1,5 +1,5 @@
 # Titles and internal titles
-PPE Ecommerce 
+PPE Ecommerce - CHOPTAPHOTO 2017/2019
 
 
 # Introduction - the project's aim
@@ -9,10 +9,6 @@ This is a school project realized in group.
 
 During our school period, our teacher asked us to create an Ecommerce website in PHP. 
 This project was given to us to deepen our knowledge in PHP. 
-
-Translated with www.DeepL.com/Translator (free version)
-
-
 
 # Technologies
  - PHP 5 or 7

@@ -1,6 +1,5 @@
-# PPE-Ecommerce
-
 # Titles and internal titles
+PPE Ecommerce 
 
 
 # Introduction - the project's aim
@@ -36,7 +35,7 @@ To launch it you must have a local server (WAMP, Laragon, Xamp ...)
 
 
  ---
-**If you do not have a wamp :** 
+**If you do not have a wamp : you need php on your computer**
 - Open a terminal :
   - enter the project
   - type in the following command **php -S localhost:3000** and enter
@@ -49,17 +48,22 @@ To launch it you must have a local server (WAMP, Laragon, Xamp ...)
 - Open your browser: type **http://localhost:3000**
 
 # Illustrations
-**Home**
+## Home
 ![image 1 ](https://user-images.githubusercontent.com/38507456/117445867-8b4de000-af3b-11eb-8b9d-d4c4f2e141cc.png)
-**reservation and produts buy**
+## reservation and produts buy
 ![image2](https://user-images.githubusercontent.com/38507456/117446957-25625800-af3d-11eb-8b1b-3143a276f69b.png)
-**shopping cart**
+## shopping cart
 ![image3](https://user-images.githubusercontent.com/38507456/117453620-6fe7d280-af45-11eb-97c2-84c28b6463f7.png)
 
-**client reservation**
+## client reservation
 ![image4](https://user-images.githubusercontent.com/38507456/117453658-7bd39480-af45-11eb-95c5-e4208e8cdff7.png)
-**customer information, with the possibility to change the password and to see all reservations**
+## customer information, with the possibility to change the password and to see all reservations
 ![image5](https://user-images.githubusercontent.com/38507456/117454140-159b4180-af46-11eb-95bd-196e03d0a0e9.png)
+## visual of the customer who booked bollards. With below the file of the photos taken during the event. Overview below (25 likes)
+![image7](https://user-images.githubusercontent.com/38507456/117456663-ba1e8300-af48-11eb-8932-60294afa8abf.png)
+## The customer has a credit of 25 likes maximum. He can like the photos he likes
+![image6](https://user-images.githubusercontent.com/38507456/117455929-f4d3eb80-af47-11eb-9625-01221c10f93b.png)
+
 
 # Project status 
 The project is currently archived, it is no longer updated by the project developers. 
@@ -69,5 +73,3 @@ The project is currently archived, it is no longer updated by the project develo
 - DUPLESSI Geoffrey
 - DOCKWILLER Guillaume 
 - AZZIBROUCK AZZILEY Franck Olivier 
-
- 
